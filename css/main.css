@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Caveat:wght@400..700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header h1 { font-size: 50px; }
+header p { font-size: 20px; }
+
+#menu-outer-wrapper { background-color: #E8D8C3; display: flex; justify-content: center; color: #5A5A5A; }
+#menu-inner-wrapper {
+    width: 700px;
+    max-width: 99%;
+    display: flex;
+    flex-direction: column;
+    padding: 70px 0px;
+    gap: 15px;
+}
+
+#menu-container {    
+    width: 650px;
+    max-width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-top: -15px;
+}
+
+#menu-outer-wrapper h2 {
+    font-family: "Caveat";
+    font-size: 40px;
+    align-self: start;
+}
+
+#menu-container h3, #menu-container p {
+    font-family: "Archivo", sans-serif;
+}
+
+#menu-container h3 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#menu-container>div {
+    position: relative;
+    padding: 25px 0;
+}
+
+#menu-container .price {
+    position: absolute;
+    top: 28px;
+    right: 0;
+}
+
+#menu-container .ingredients {
+    margin-top: 8px;
+}
+
+#menu-container>*:not(:last-child) {
+    border-bottom: 1px solid rgba(90,90,90,0.3);
+}
+
+footer {
+    background-color: #817a6f;
+    color: #F5F5F5;
+    font-family: "Archivo", sans-serif;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: auto;
+    padding: 50px;
+}
+
+footer>div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 200px;
+}
+
+footer>div>div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-bold { font-weight: bold; }
+.footer-link { text-decoration: underline; }
+.footer-link:hover { cursor: pointer; }
+
+#opening-hours div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#hero-image {
+    font-family: "Caveat";
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    background-image: url(/images/hero-image.webp);
+    background-size: cover;
+    color: #F5F5F5;
+}
+
+#hero-container {
+    position: relative;
+    padding: 12px 46px;
+}
+
+#hero-container>h1, #hero-container>p { position: relative; z-index: 2; }
+
+#blurred-bg {
+    background-color: rgba(155,170,148, 1);
+    border-radius: 20px;
+    filter: blur(10px);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+#about-container {
+    background-color: rgb(155,170,148);
+}
+
+#about-container {
+    color: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 70px 0px;
+}
+
+#about-container>div {
+    width: 650px;
+    max-width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+#about-container>div>div {
+    display: flex;
+    gap: 20px;
+    /* align-items: center; */
+}
+
+#about-container h2 { margin-bottom: 10px; }
+#about-container h2 { font-family: "Caveat"; font-size: 30px; }
+#about-container p { font-family: "Archivo"; line-height: 1.5em;}
+
+.image {
+    min-height: 250px;
+    min-width: 250px;
+    max-height: 250px;
+    max-width: 250px;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 2px;
+}
+
+/* MEDIA QUERIES FOR SMALL SCREEN WIDTHS*/
+@media (width <= 600px) {
+    #about-container>div { gap: 20px; }
+    #about-container>div>div { flex-direction: column; }
+    .order-1 { order: 1; }
+    .image { align-self: center; }
+    footer { flex-direction: column; gap: 30px; }
+    footer>div { width: 100%; }
+    #contact { border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 30px; }
+}
