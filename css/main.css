@@ -119,6 +119,12 @@ footer>div>div {
 #hero-container {
     position: relative;
     padding: 12px 46px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 #hero-container>h1, #hero-container>p { position: relative; z-index: 2; }
