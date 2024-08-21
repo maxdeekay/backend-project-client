@@ -39,7 +39,7 @@ function drawMenu(menu) {
 // function that gets the complete menu from the API
 async function getMenu() {
     try {
-        const url = "http://127.0.0.1:3000/consumables";
+        const url = "https://backend-project-api.onrender.com/consumables";
         const response = await fetch(url);
         if (response.ok) return await response.json();
     } catch (error) {
